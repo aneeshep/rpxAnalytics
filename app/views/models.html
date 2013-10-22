@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost/~aneesh/rpx1/ -->
+<html class="js no-touch svg inlinesvg svgclippaths no-ie8compat wf-proximanova-i1-active wf-proximanova-i3-active wf-proximanova-i4-active wf-proximanova-i6-active wf-proximanova-i7-active wf-proximanova-i8-active wf-proximanova-i9-active wf-proximanova-n1-active wf-proximanova-n3-active wf-proximanova-n4-active wf-proximanova-n6-active wf-proximanova-n7-active wf-proximanova-n8-active wf-proximanova-n9-active wf-proximanovacondensed-i2-active wf-proximanovacondensed-i3-active wf-proximanovacondensed-i4-active wf-proximanovacondensed-i6-active wf-proximanovacondensed-i7-active wf-proximanovacondensed-i8-active wf-proximanovacondensed-i9-active wf-proximanovacondensed-n2-active wf-proximanovacondensed-n3-active wf-proximanovacondensed-n4-active wf-proximanovacondensed-n6-active wf-proximanovacondensed-n7-active wf-proximanovacondensed-n8-active wf-proximanovacondensed-n9-active wf-active" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>RPX</title>
+	<link rel="stylesheet" href="http://rpx.sliceoflime.com/assets/js/vendor/foundation-datepicker/foundation-datepicker.css">
+	<link rel="stylesheet" href="/styles/main.css">
+	<script src="/scripts/custom.modernizr.js"></script>
+	
+</head>
+<body style="">
+
+	<div class="banner">
+		<div class="row">
+			<div class="large-10 columns main-header">
+				<a href="#/home">
+					<h1>RPX</h1>
+					<h2> Predictive Analytics Platform</h2>
+				</a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="row" ng-init="init()">
+		<div class="large-12 columns">
+			<div class="panel">
+				<div class="small-12 large-centered columns">
+					   <div id="loader" ng-show=" ! model.id " class="push-5">
+					   		<img src="http://english.ahram.org.eg/App_Themes/Black/images/lightbox-ico-loading.gif">
+					   </div>
+				      <fieldset ng-show="model.id">
+				        <legend>{{ model.name.split('-')[1] }}</legend>
+				        
+				        <form id="inputForm" class="custom" data-abide="" novalidate="novalidate">
+				          <div class="row">
+				          <div class="large-12 columns">
+<!-- 				            <div class="panel">
+				               This is not intended for client facing work. This is prototype code.
+				            </div> -->
+				          </div>
+				          </div>
+				          <div class="row">
+				       
+				            
+				            <div class="large-4  push-4 columns">
+				              <div ng-repeat = "input in model.inputs">
+				              	<label for="">{{ input.label }}</label>
+				              	<input type="text" name="{{ input.name }}">
+				              </div>
+				              <button id="go_button" name="go_button" type="button">Find {{ model.name.split('-')[1] }}</button>
+				              <img id="spinner" src="images/ajax-loader.gif" style="display: none">
+				            </div>
+				          </div>
+				        </form>
+				        
+				      </fieldset>
+				      <div class="clear"></div>
+				      <fieldset ng-show = "results.length">
+				      	<legend>Results</legend>
+				      	<table>
+						  <thead>
+						    <tr>
+						      <th width="200">Table Header</th>
+						      <th>Table Header</th>
+						      <th width="150">Table Header</th>
+						      <th width="150">Table Header</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td>Content Goes Here</td>
+						      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+						      <td>Content Goes Here</td>
+						      <td>Content Goes Here</td>
+						    </tr>
+						    <tr>
+						      <td>Content Goes Here</td>
+						      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+						      <td>Content Goes Here</td>
+						      <td>Content Goes Here</td>
+						    </tr>
+						    <tr>
+						      <td>Content Goes Here</td>
+						      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+						      <td>Content Goes Here</td>
+						      <td>Content Goes Here</td>
+						    </tr>
+						  </tbody>
+						</table>
+						<div class="clear"></div>
+						<table>
+						  <thead>
+						    <tr>
+						      <th width="200">Table Header</th>
+						      <th>Table Header</th>
+						      <th width="150">Table Header</th>
+						      <th width="150">Table Header</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td>Content Goes Here</td>
+						      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+						      <td>Content Goes Here</td>
+						      <td>Content Goes Here</td>
+						    </tr>
+						    <tr>
+						      <td>Content Goes Here</td>
+						      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+						      <td>Content Goes Here</td>
+						      <td>Content Goes Here</td>
+						    </tr>
+						    <tr>
+						      <td>Content Goes Here</td>
+						      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+						      <td>Content Goes Here</td>
+						      <td>Content Goes Here</td>
+						    </tr>
+						  </tbody>
+						</table>
+				      </fieldset>
+				    </div>
+
+			</div>
+		</div>
+	</div>
+	
+
+
+</body></html>

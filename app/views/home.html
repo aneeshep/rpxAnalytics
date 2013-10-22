@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost/~aneesh/rpx1/ -->
+<html class="js no-touch svg inlinesvg svgclippaths no-ie8compat wf-proximanova-i1-active wf-proximanova-i3-active wf-proximanova-i4-active wf-proximanova-i6-active wf-proximanova-i7-active wf-proximanova-i8-active wf-proximanova-i9-active wf-proximanova-n1-active wf-proximanova-n3-active wf-proximanova-n4-active wf-proximanova-n6-active wf-proximanova-n7-active wf-proximanova-n8-active wf-proximanova-n9-active wf-proximanovacondensed-i2-active wf-proximanovacondensed-i3-active wf-proximanovacondensed-i4-active wf-proximanovacondensed-i6-active wf-proximanovacondensed-i7-active wf-proximanovacondensed-i8-active wf-proximanovacondensed-i9-active wf-proximanovacondensed-n2-active wf-proximanovacondensed-n3-active wf-proximanovacondensed-n4-active wf-proximanovacondensed-n6-active wf-proximanovacondensed-n7-active wf-proximanovacondensed-n8-active wf-proximanovacondensed-n9-active wf-active" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>RPX</title>
+	<link rel="stylesheet" href="http://rpx.sliceoflime.com/assets/js/vendor/foundation-datepicker/foundation-datepicker.css">
+	<link rel="stylesheet" href="/styles/main.css">
+	<script src="/scripts/custom.modernizr.js"></script>
+	
+	
+</head>
+<body style="">
+
+	<div class="banner">
+		<div class="row">
+			<div class="large-10 columns main-header">
+			<a href="#/home">
+					<h1>RPX</h1>
+					<h2> Predictive Analytics Platform</h2>
+			</a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="row" ng-init="init()">
+		<div class="large-12 columns">
+
+			<div class="panel">
+					<div id="loader" ng-show="!models.length" class="push-5">
+						<img src="http://english.ahram.org.eg/App_Themes/Black/images/lightbox-ico-loading.gif">
+					</div>
+				<!-- <a href="topIpcClasses.html" class="button">Top IPC Classes</a>
+				<a href="" class="button">Relevant Companies for Patents</a>
+				<a href="" class="button">model 3</a>
+ -->
+ 				<a ng-repeat ="model in models" ng-href="#/models/{{model.id}}" class="button"> {{ model.name }} <div class="small">{{ model.description}}</div></a>
+			</div>
+		</div>
+	</div>
+	
+	
+
+
+</body></html>
