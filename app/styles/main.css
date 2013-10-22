@@ -4073,6 +4073,7 @@ table {
   background: white;
   margin-bottom: 1.25em;
   border: solid 1px #dddddd;
+  margin-top: 10px;
 }
 
 table thead,

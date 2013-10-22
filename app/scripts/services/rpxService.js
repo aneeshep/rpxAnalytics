@@ -13,4 +13,11 @@ angular.module('WorksApp')
 
           return $http.get( apiUrl + '/models/' + id);
         };
+
+        this.getModelResult = function(id, data) {
+
+        	//var data = { I_PATENT_NUMS : '122122', I_NUM_CLASSCODES :10 };
+        	var config = { headers: {'Content-Type': 'application/x-www-form-urlencoded'}}
+        	return $http.post('http://10.50.43.27:8080/RpxAnalytics/services/analytics/models/'+id, data ,config);
+        }
       }]);

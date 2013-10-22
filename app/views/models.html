@@ -32,7 +32,7 @@
 					   </div>
 				      <fieldset ng-show="model.id">
 				        <legend>{{ model.name.split('-')[1] }}</legend>
-				        
+				        <div ng-click = "getDetails()"> Test me</div>
 				        <form id="inputForm" class="custom" data-abide="" novalidate="novalidate">
 				          <div class="row">
 				          <div class="large-12 columns">
@@ -47,79 +47,39 @@
 				            <div class="large-4  push-4 columns">
 				              <div ng-repeat = "input in model.inputs">
 				              	<label for="">{{ input.label }}</label>
-				              	<input type="text" name="{{ input.name }}">
+				              	<input type="text" name="{{ input.name }}" ng-model = "data[input.name]">
 				              </div>
-				              <button id="go_button" name="go_button" type="button">Find {{ model.name.split('-')[1] }}</button>
+				              <button id="go_button" name="go_button" type="button" ng-click="getDetails()">Find {{ model.name.split('-')[1] }}</button>
 				              <img id="spinner" src="images/ajax-loader.gif" style="display: none">
 				            </div>
 				          </div>
 				        </form>
 				        
 				      </fieldset>
+
 				      <div class="clear"></div>
 				      <fieldset ng-show = "results.length">
 				      	<legend>Results</legend>
-				      	<table>
-						  <thead>
-						    <tr>
-						      <th width="200">Table Header</th>
-						      <th>Table Header</th>
-						      <th width="150">Table Header</th>
-						      <th width="150">Table Header</th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						    <tr>
-						      <td>Content Goes Here</td>
-						      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
-						      <td>Content Goes Here</td>
-						      <td>Content Goes Here</td>
-						    </tr>
-						    <tr>
-						      <td>Content Goes Here</td>
-						      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-						      <td>Content Goes Here</td>
-						      <td>Content Goes Here</td>
-						    </tr>
-						    <tr>
-						      <td>Content Goes Here</td>
-						      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-						      <td>Content Goes Here</td>
-						      <td>Content Goes Here</td>
-						    </tr>
-						  </tbody>
-						</table>
-						<div class="clear"></div>
-						<table>
-						  <thead>
-						    <tr>
-						      <th width="200">Table Header</th>
-						      <th>Table Header</th>
-						      <th width="150">Table Header</th>
-						      <th width="150">Table Header</th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						    <tr>
-						      <td>Content Goes Here</td>
-						      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
-						      <td>Content Goes Here</td>
-						      <td>Content Goes Here</td>
-						    </tr>
-						    <tr>
-						      <td>Content Goes Here</td>
-						      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-						      <td>Content Goes Here</td>
-						      <td>Content Goes Here</td>
-						    </tr>
-						    <tr>
-						      <td>Content Goes Here</td>
-						      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-						      <td>Content Goes Here</td>
-						      <td>Content Goes Here</td>
-						    </tr>
-						  </tbody>
-						</table>
+				     	<div ng-repeat ="result in results">
+				     		<h3> {{ result.name }}</h3>
+				     		<div > {{ result.description }} </div>
+
+				     		 	<table class="result" >
+								  <thead>
+								    <tr>
+								      <th ng-repeat = "(key,value) in result.results[0]"> {{ key}} </th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr ng-repeat = "tablerow in result.results">
+								      <td ng-repeat = "(key,value) in tablerow">{{value}}</td>
+								     
+								    </tr>
+								  </tbody>
+								</table>
+				     	</div>
+
+
 				      </fieldset>
 				    </div>
 

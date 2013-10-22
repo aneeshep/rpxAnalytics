@@ -7,6 +7,7 @@ angular.module('WorksApp')
     /*console.log($routeParams.id);*/
     $scope.model = {};
     $scope.results = [];
+    $scope.data = {}
 
 
     $scope.init = function() {
@@ -17,6 +18,16 @@ angular.module('WorksApp')
           $scope.model = res;
         });
     };
+
+    $scope.getDetails = function() {
+
+      Rpxservice.getModelResult($routeParams.id, $scope.data)
+        .success(function(res){
+
+          console.log(res);
+          $scope.results = res;
+        });
+    }
 
 
   });
