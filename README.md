@@ -55,7 +55,7 @@ Follow these instructions to deploy the app in production enviornment.
 This command will build the app and the result will be stored in a folder called `dist` inside the `rpxAnalytics' folder. 
 Now you can host the 'dist' folder in your webserver.
 
-Note: A premade build is also available [here](). You can use this if you are not making any changes to the source code.
+Note: A premade build is also available [here](https://github.com/aneeshep/rpxAnalytics/tree/master/build). You can use this if you are not making any changes to the source code.
 This build will be upadated frequently
 
 
