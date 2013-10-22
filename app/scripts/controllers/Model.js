@@ -7,7 +7,7 @@ angular.module('WorksApp')
     /*console.log($routeParams.id);*/
     $scope.model = {};
     $scope.results = [];
-    $scope.data = {}
+    $scope.data = {};
 
 
     $scope.init = function() {
@@ -27,7 +27,7 @@ angular.module('WorksApp')
           console.log(res);
           $scope.results = res;
         });
-    }
+    };
 
 
   });
