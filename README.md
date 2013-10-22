@@ -61,7 +61,18 @@ This build will be upadated frequently
 
 ##Issues and Workarounds
  
-1. Cross Origin Request Policy
+1. Cross Origin Request Policy (CORS)
+      
+      There is a good article at mozilla developer network that explains the pblm and solutions. 
+      https://developer.mozilla.org/en/docs/HTTP/Access_control_CORS
+       
+
+      There is a quick work around for this pblm ( for development purpose only) . We can disable the websecurity in google chrome
+      so that it will not show any error for the Cross Origin Requests. 
+      
+   * Disable web security in chrome on Windows/Mac : http://documentumcookbook.wordpress.com/2012/03/13/disable-cross-domain-javascript-security-in-chrome-for-development/
+   * Disable web security in chrome on Linux :  run this command from a terminal : `google-chrome --disable-web-security`
+      
 
 
 
