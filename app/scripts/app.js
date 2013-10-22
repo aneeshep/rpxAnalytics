@@ -7,9 +7,8 @@ angular.module('WorksApp', [
 ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+      .when('/',{
+        redirectTo: '/home'
       })
       .when('/home', {
         templateUrl: 'views/home.html',
