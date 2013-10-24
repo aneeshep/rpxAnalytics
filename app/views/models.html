@@ -46,7 +46,7 @@
 				            
 				            <div class="large-4  push-4 columns">
 				              <div ng-repeat = "input in model.inputs">
-				              	<label for="">{{ input.label }}</label>
+				              	<label for="">{{ input.type }}</label>
 				              	<input type="text" name="{{ input.name }}" ng-model = "data[input.name]">
 				              </div>
 				              <button id="go_button" name="go_button" type="button" ng-click="getDetails()">Find {{ model.name.split('-')[1] }}</button>
