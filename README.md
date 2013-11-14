@@ -29,6 +29,7 @@
   Install the dependencies and tools required to run this app
   
         cd rpxAnalytics
+        npm install -g yo
         npm install  # This step may fail at first time. Never mind run it again it will succeed
         bower install
   
