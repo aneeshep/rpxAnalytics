@@ -16,6 +16,10 @@ angular.module('WorksApp')
        .success(function(res){
           /*console.log(res);*/
           $scope.model = res;
+		     res.inputs.forEach(function(el, i){
+              $scope.data[el.id] = el.defValue;
+
+          });
         });
     };
 

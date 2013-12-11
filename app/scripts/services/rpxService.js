@@ -17,6 +17,6 @@ angular.module('WorksApp')
         this.getModelResult = function(id, data) {
             //var data = { I_PATENT_NUMS : '122122', I_NUM_CLASSCODES :10 };
             var config = { headers: {'Content-Type': 'application/x-www-form-urlencoded'}};
-            return $http.post( apiUrl + '/models/'+id, data ,config);
+            return $http.post( apiUrl + '/models/'+id, $.param(data) ,config);
           };
       }]);
